@@ -20,6 +20,7 @@
         />
 
     <LinearLayout
+        android:id="@+id/diceContainer"
         android:layout_width="220sp"
         android:layout_height="100sp"
         android:layout_marginTop="40sp"
@@ -30,11 +31,13 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/firstDice"
             android:layout_width="100sp"
             android:layout_height="match_parent"
             android:src="@drawable/dice1"/>
 
         <ImageView
+            android:id="@+id/secondDice"
             android:layout_width="100sp"
             android:layout_height="match_parent"
             android:src="@drawable/dice2"
@@ -42,4 +45,17 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9B1C1F"
+        android:text="Roll!"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/diceContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
