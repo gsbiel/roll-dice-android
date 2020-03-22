@@ -7,5 +7,15 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginTop="60sp"
+        android:src="@drawable/diceelogo"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
