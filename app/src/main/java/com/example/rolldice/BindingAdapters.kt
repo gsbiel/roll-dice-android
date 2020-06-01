@@ -1,5 +1,4 @@
 package com.example.rolldice
-
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 

@@ -16,15 +16,11 @@ class DiceFragment: Fragment() {
     private lateinit var viewModelFactory: DiceViewModelFactory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         val binding: FragmentDiceBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_dice, container, false)
         binding.lifecycleOwner = this
-
         viewModelFactory = DiceViewModelFactory(1,2)
-
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(DiceViewModel::class.java)
         binding.diceViewModel = viewModel
-
         return binding.root
     }
 }
