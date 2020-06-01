@@ -15,7 +15,7 @@ class DiceViewModel(private val dice1: Int, private val dice2: Int): ViewModel()
     val secondDicce: LiveData<Int>
         get() = _secondDice
 
-    fun rollDice(){
+    fun rollDices(){
         _firstDice.postValue(Random.nextInt(0,5))
         _secondDice.postValue(Random.nextInt(0,5))
     }
