@@ -2,7 +2,9 @@ package com.example.rolldice.rolldice
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.example.rolldice.getImage
 import kotlin.random.Random
 
 class DiceViewModel(private val dice1: Int, private val dice2: Int): ViewModel() {
@@ -12,11 +14,11 @@ class DiceViewModel(private val dice1: Int, private val dice2: Int): ViewModel()
         get() = _firstDice
 
     private val _secondDice = MutableLiveData<Int>()
-    val secondDicce: LiveData<Int>
+    val secondDice: LiveData<Int>
         get() = _secondDice
 
     fun rollDices(){
-        _firstDice.postValue(Random.nextInt(0,5))
-        _secondDice.postValue(Random.nextInt(0,5))
+        _firstDice.postValue(Random.nextInt(0,6))
+        _secondDice.postValue(Random.nextInt(0,6))
     }
 }
