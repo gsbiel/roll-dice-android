@@ -13,37 +13,30 @@
         android:layout_height="200sp"
         android:layout_marginTop="30sp"
         android:src="@drawable/diceelogo"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/firstDice"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dice1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/secondDice"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
         />
 
-    <LinearLayout
-        android:id="@+id/diceContainer"
-        android:layout_width="220sp"
-        android:layout_height="100sp"
-        android:layout_marginTop="40sp"
-        android:orientation="horizontal"
-
-        app:layout_constraintTop_toBottomOf="@id/applogo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:id="@+id/firstDice"
-            android:layout_width="100sp"
-            android:layout_height="match_parent"
-            android:src="@drawable/dice1"/>
-
-        <ImageView
-            android:id="@+id/secondDice"
-            android:layout_width="100sp"
-            android:layout_height="match_parent"
-            android:src="@drawable/dice2"
-            android:layout_marginLeft="20sp"/>
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/secondDice"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:src="@drawable/dice2"
+        app:layout_constraintStart_toEndOf="@id/firstDice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        />
 
     <Button
         android:id="@+id/rollButton"
@@ -53,9 +46,16 @@
         android:text="Roll!"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/diceContainer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
